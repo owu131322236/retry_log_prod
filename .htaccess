@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+    Options -Indexes
+    RewriteEngine On
+    RewriteRule ^build/(.*)$ retry_log/public/build/$1 [L]
+    RewriteRule ^manifest.json$ retry_log/public/build/manifest.json [L]
+    RewriteRule ^storage/(.*)$ retry_log/public/storage/$1 [L]
+    RewriteRule ^$ retry_log/public/index.php [L]
+    RewriteRule ^(.*)$ retry_log/public/index.php [L]
+</IfModule>
